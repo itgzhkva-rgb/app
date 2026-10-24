@@ -60,3 +60,21 @@ textarea{min-height:110px}
 #printReport{display:none}@media print{@page{size:A4;margin:20mm}body>*{display:none!important}body>#printReport{display:block!important;color:#222;font:12pt Arial;background:white}#printReport h2{font: bold 15pt Georgia;color:#434d2e;break-after:avoid;margin:18pt 0 8pt}#printReport p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;margin:0 0 10pt}}
 #closeDialog{margin-top:24px}
 .categoryBlock{margin:24px 0;padding:22px;border:1px solid #d9ddca;border-radius:16px}.categoryBlock h3{font:27px Georgia,serif;margin:0 0 16px}.categoryBlock textarea{margin-bottom:12px;min-height:115px}.categoryBlock .task{margin-bottom:6px}.categoryBlock+.notice{margin-top:24px}.pastReview{margin-top:28px}.pastReview details{margin-top:18px}@media(max-width:600px){.categoryBlock{padding:16px}}
+/* Shared rhythm: 8px between a label and its field, 24px between groups. */
+:root{--space-text:8px;--space-group:24px}
+#content>h2{margin:var(--space-text) 0}
+#content>.intro{margin:0 0 var(--space-group)}
+#content label,.decomposition label{margin:var(--space-group) 0 var(--space-text)}
+#content textarea{display:block;margin-bottom:0}
+#content .timer{margin-bottom:var(--space-group)}
+.categoryBlock{margin:var(--space-group) 0;padding:var(--space-group)}
+.categoryBlock h3,.decomposition h3{margin:0 0 var(--space-group);line-height:1.3}
+.categoryBlock label:first-of-type{margin-top:0}
+.fieldHint{font-size:13px;line-height:1.5;color:#626855;margin:var(--space-text) 0 0}
+.decomposition{margin:var(--space-group) 0;padding-bottom:var(--space-group)}
+.notice,.pastReview{margin:var(--space-group) 0}
+.pastReview h4{margin:var(--space-group) 0 var(--space-text)}
+.multiline,.summary p{margin:0 0 var(--space-group);line-height:1.7}
+.summary h3{margin:var(--space-group) 0}
+.exportActions{gap:var(--space-text);margin:var(--space-group) 0}
+@media(max-width:600px){.categoryBlock{padding:16px}}
